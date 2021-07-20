@@ -44,4 +44,10 @@ export default class MythsController {
       window.alert("Something went wrong: " + e)
     }
   }
+
+  answer() {
+    if (this.answers == this.correct) {
+      alert("you are right!")
+    }
+  }
 }
