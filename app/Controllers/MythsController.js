@@ -1,5 +1,5 @@
 import { ProxyState } from "../AppState.js";
-import { MythsService } from "../Services/MythsService.js";
+import { mythsService } from "../Services/MythsService.js";
 
 function _draw() {
   let myths = ProxyState.myths
@@ -30,7 +30,7 @@ export default class MythsController {
 
   async getAll() {
     try {
-      await mythsService.getAllMyth()
+      await mythsService.getAllMyths()
     } catch (error) {
       window.alert("Something went wrong: " + error)
     }
@@ -39,7 +39,7 @@ export default class MythsController {
 
   async getMore(direction) {
     try {
-      await mythsService.getAllMyth(ProxyState[direction])
+      await mythsService.getAllMyths(ProxyState[direction])
     } catch (e) {
       window.alert("Something went wrong: " + e)
     }

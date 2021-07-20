@@ -3,7 +3,7 @@ import Myth from "../Models/Myth.js"
 import { api } from "./AxiosService.js"
 
 class MythsService {
-  async getAllPeople(url = 'myth') {
+  async getAllMyths(url = 'myth') {
 
     const res = await api.get(url)
 
@@ -12,8 +12,8 @@ class MythsService {
     ProxyState.next = res.data.next
     ProxyState.previous = res.data.previous
 
-    let myth = res.data.results.map(m => new Myth(m))
-    ProxyState.myth = myth
+    let myth = res.data.results.map(m => new Myths(m))
+    ProxyState.myths = myth
   }
 
 
