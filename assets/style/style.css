@@ -2,8 +2,10 @@
 .navbar {
   display: flex;
   justify-content: center;
-list-style: none;
+  list-style: none;
+  text-shadow: 2px 2px fuchsia;
 }
+
 body {
   display: flex;
   flex-direction: column;
