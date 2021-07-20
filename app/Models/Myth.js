@@ -19,7 +19,7 @@ export default class Myth {
               <button type="" class="btn btn-primary btn-outline-info m-3 align-center" style="background-color: seafoam; font-size: 24px; color: black; text-shadow: 1px 1px white" onclick="app.mythsController.answer('${this.answers[0]}','${this.correct}')">${this.answers[0]}</button>
               <button type="" class="btn btn-primary btn-outline-info m-3 align-center" style="background-color: seafoam; font-size: 24px; color: black; text-shadow: 1px 1px white" onclick="app.mythsController.answer('${this.answers[1]}','${this.correct}')">${this.answers[1]}</button>
               <button type="" class="btn btn-primary btn-outline-info m-3 align-center" style="background-color: seafoam; font-size: 24px; color: black; text-shadow: 1px 1px white" onclick="app.mythsController.answer('${this.answers[2]}','${this.correct}')">${this.answers[2]}</button>
-              <button type="" class="btn btn-primary btn-outline-info m-3 align-center" style="background-color: seafoam; font-size: 24px; color: black; text-shadow: 1px 1px white" onclick="app.mythsController.answer('${this.answers[0]}','${this.correct}')">${this.answers[0]}</button>
+              <button type="" class="btn btn-primary btn-outline-info m-3 align-center" style="background-color: seafoam; font-size: 24px; color: black; text-shadow: 1px 1px white" onclick="app.mythsController.answer('${this.answers[3]}','${this.correct}')">${this.answers[3]}</button>
           </div >
       </div >`
 
