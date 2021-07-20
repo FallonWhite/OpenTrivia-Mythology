@@ -27,7 +27,7 @@ export default class Myth {
 
   get Answers() {
     let template = ''
-    this.incorrectAnswers.forEach(i => template += `<h3 onclick="">${i}</h3>`)
+    this.answers.forEach(i => template += `<h3 onclick="">${i}</h3>`)
     return template
   }
 }
