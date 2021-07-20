@@ -14,9 +14,9 @@ export default class Myth {
   get Template() {
     return `<ol id="myth" <li>${this.difficulty} - ${this.question} : ${this.correctAnswer}${this.incorrectAnswers}</li>`
   }
-}
+
 <div class="col-6 mt-3" id="myth">
-  <div class="" style="">
+  <div class="row" id="myth">
     <div class="">
       <div class="text-center">
         <h3 style="color: black; text-shadow: 1px 1px darkblue"><b>${this.difficulty} -${this.question}</b></h3>
@@ -31,3 +31,4 @@ export default class Myth {
   </div>
 
 </div >
+}
