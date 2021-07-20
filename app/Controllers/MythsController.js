@@ -8,10 +8,10 @@ function _draw() {
   document.getElementById('myths').innerHTML = template
 
   document.getElementById('buttons').innerHTML = `
-  <button type="button" class="btn btn-secondary btn-outline-info m-3" style="font-size: 24px;"
+  <button type="button" class="btn btn-secondary btn-outline-info m-5" style="background-color: pink; font-size: 24px; color: black; text-shadow: 1px 1px white"
   ${ProxyState.previous ? '' : 'disabled'}
   onclick="app.mythsController.getMore('previous')"><b>Previous</b></button>
-<button type="button" class="btn btn-secondary btn-outline-info m-3" style="font-size: 24px;" ${ProxyState.next
+<button type="button" class="btn btn-secondary btn-outline-info m-5" style="background-color: pink; font-size: 24px; color: black; text-shadow: 1px 1px white" ${ProxyState.next
       ? '' : 'disabled'} onclick="app.mythsController.getMore('next')"><b>Next</b></button>
                         `
 
@@ -22,7 +22,7 @@ function _draw() {
 export default class MythsController {
   constructor() {
     // REGISTER ALL LISTENERS
-    ProxyState.on('myth', _draw)
+    ProxyState.on('myths', _draw)
 
     // GET DATA FOR CONTROLLER
     this.getAll()

@@ -14,15 +14,20 @@ export default class Myth {
   get Template() {
     return `
     <div class="row" id="myths">
-        <div class="col-6 mt-3">
-              <h3 style="color: black; text-shadow: 1px 1px darkblue"><b>${this.difficulty} -${this.question}:</b></h3>
-              <button type="" class="btn btn-primary btn-outline-info btn-sm mb-3 align-center" onclick="app.mythsController.answers('${this.answers[0]}')" style="font-size: 16px;">${this.answers[0]}</button>
-              <button type="" class="btn btn-primary btn-outline-info btn-sm mb-3 align-center" onclick="app.mythsController.answers('${this.answers[1]}')" style="font-size: 16px;">${this.answers[1]}</button>
-              <button type="" class="btn btn-primary btn-outline-info btn-sm mb-3 align-center" onclick="app.mythsController.answers('${this.answers[2]}')" style="font-size: 16px;">${this.answers[2]}</button>
-              <button type="" class="btn btn-primary btn-outline-info btn-sm mb-3 align-center" onclick="app.mythsController.answers('${this.answers[3]}')" style="font-size: 16px;">${this.answers[3]}</button>
+        <div class="col-12 mt-5 p-4" style="background-color: grey; opacity: 0.75">
+              <h3 style="color: black; text-shadow: 1px 1px white"><b>Difficulty: (${this.difficulty}) - Question: ${this.question}</b></h3>
+              <button type="" class="btn btn-primary btn-outline-info m-3 align-center" style="background-color: seafoam; font-size: 24px; color: black; text-shadow: 1px 1px white" onclick="app.mythsController.answers('${this.answers[0]}')">${this.answers[0]}</button>
+              <button type="" class="btn btn-primary btn-outline-info m-3 align-center" style="background-color: seafoam; font-size: 24px; color: black; text-shadow: 1px 1px white" onclick="app.mythsController.answers('${this.answers[1]}')" style="font-size: 16px;">${this.answers[1]}</button>
+              <button type="" class="btn btn-primary btn-outline-info m-3 align-center" style="background-color: seafoam; font-size: 24px; color: black; text-shadow: 1px 1px white" onclick="app.mythsController.answers('${this.answers[2]}')">${this.answers[2]}</button>
+              <button type="" class="btn btn-primary btn-outline-info m-3 align-center" style="background-color: seafoam; font-size: 24px; color: black; text-shadow: 1px 1px white" onclick="app.mythsController.answers('${this.answers[3]}')">${this.answers[3]}</button>
           </div >
       </div >`
 
   }
 
+  get Answers() {
+    let template = ''
+    this.incorrectAnswers.forEach(i => template += `<h3 onclick="">${i}</h3>`)
+    return template
+  }
 }
