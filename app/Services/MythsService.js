@@ -8,8 +8,8 @@ class MythsService(url = 'myth') {
 
   console.log(res.data.results)
 
-  //ProxyState.next = res.data.next
-  //ProxyState.previous = res.data.previous
+  ProxyState.next = res.data.next
+  ProxyState.previous = res.data.previous
 
   let myth = res.data.results.map(m => new Myth(m))
   ProxyState.myth = myth

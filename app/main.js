@@ -1,7 +1,7 @@
-import ValuesController from "./Controllers/ValuesController.js";
+import MythsController from "./Controllers/MythsController.js";
 
 class App {
-  valuesController = new ValuesController();
+  mythsController = new MythsController()
 }
 
 window["app"] = new App();
