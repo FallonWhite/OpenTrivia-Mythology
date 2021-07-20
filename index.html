@@ -7,6 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
@@ -18,14 +21,32 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-dark navbar-expand bg-dark text-light">
+        <nav class="navbar navbar-dark navbar-expand bg-info text-dark">
             <a class="navbar-brand" href="#">
-                <img src="assets/img/logo.png" width="45" height="45" alt="" loading="lazy">
-                <span class="ml-2">Trivia-Mythology</span>
+                <h1 class="mx-2 my-2 mdi mdi-36px mdi-flare" style="color: black; text-shadow: 1px 1px blueviolet">
+                    Mythological Trivia<span class="mdi mdi-36px mdi-flare ml-2"></span></h1>
             </a>
         </nav>
     </header>
     <main class="container">
+        <div id="buttons">
+            <div class="row">
+                <div class="col-12">
+                    <button type="button" class="btn btn-secondary btn-outline-info m-3" style="font-size: 24px;"
+                        ${ProxyState.previous ? '' : 'disabled' }
+                        onclick="app.mythsController.getMore('previous')"><b>Previous</b></button>
+                    <button type="button" class="btn btn-secondary btn-outline-info m-3" style="font-size: 24px;"
+                        ${ProxyState.next ? '' : 'disabled' }
+                        onclick="app.mythsController.getMore('next')"><b>Next</b></button>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="row" id="myths">
+
+
+        </div>
         <div id="app"></div>
     </main>
     <footer class="bg-dark text-light">
