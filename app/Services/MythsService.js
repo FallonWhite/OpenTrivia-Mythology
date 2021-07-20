@@ -3,7 +3,7 @@ import Myth from "../Models/Myth.js"
 import { api } from "./AxiosService.js"
 
 class MythsService {
-  async getAllMyths(url = '?amount=2&category=20') {
+  async getAllMyths(url = '?amount=2&category=20&type=multiple') {
 
     const res = await api.get(url)
 

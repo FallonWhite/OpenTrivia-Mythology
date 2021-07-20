@@ -43,9 +43,12 @@ export default class MythsController {
     }
   }
 
-  answer() {
-    if (this.answers == this.correct) {
-      alert("you are right!")
+  answer(answer, correct) {
+    if (answer == correct) {
+      alert("Odin approves!")
+    } else {
+      alert("Incorrect - Learn your Mythos!")
     }
+
   }
 }
